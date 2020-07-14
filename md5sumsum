@@ -6,7 +6,7 @@ for arg in sys.argv:
     for path, subdirs, files in os.walk(arg):
         for name in files:
             paths.append(os.path.join(path, name))
-hashcat = b""
+hashcat = ""
 for f in sorted(paths):
     with open(f,'rb') as file : 
         hashcat += file.read()
